@@ -6,7 +6,7 @@ When making API calls to large datasets, such as product catalogs for a large ec
 ### Project Rationale
 In software development there are those that *build tools* and those that *build with* tools. Both require a developer skillset but with different emphasis and expertise. As a Product Manager I worked with teams leveraging open-source platforms that dynamically rendered APIs enabling us to build client-facing solutions. This is incredibly valuable for accelerating development. As a software architect I needed to build custom api's for microservices and integrations on a smaller scale, which didn't require pagination just a good OpenAPI standard and security.  
 
-This project was my way of demonstrating it's a vital skill to understand what's happening under the hood and how to think about API design principles required to build one that handles large datasets. 
+This project was my way of demonstrating it's a vital skill to understand what's happening under the hood and how to think about API design principles required to build one that handles large datasets... 
 
 ### Pagination as a solution 
 Pagination is an API design pattern that enables us to present data/content to a user incrementally in "chunks" making content digestible and presenting content on pages. The question is, which method of pagination is the best choice for a scalable platform? My project explores the two most common methods.
