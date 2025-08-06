@@ -1,4 +1,4 @@
-## API Pagination Demo
+## API Pagination Demo (Cursor vs Offset Methods) 
 
 ### The Problem: 
 When making API calls to large datasets, such as product catalogs for a large ecommerce sites with thousands of items stored in the database, returning all data at once is not an option for a single call, for a number of reasons. It would cause a huge strain on the server resulting in bottlenecks and slow sites. It's not a common or desirable user experience to scroll thousands of returned items on a single page (i.e. products, inventory, blog articles etc.)
@@ -9,7 +9,7 @@ In software development there are those that *build tools* and those that *build
 This project was my way of demonstrating it's a vital skill to understand what's happening under the hood and how to think about API design principles required to build one that handles large datasets... 
 
 ### Pagination as a solution 
-Pagination is an API design pattern that enables us to present data/content to a user incrementally in "chunks" making content digestible and presenting content on pages. The question is, which method of pagination is the best choice for a scalable platform? My project explores the two most common methods.
+Pagination is an API design pattern that enables us to present data/content to a user incrementally in "chunks" making content digestible and presenting content on pages. The question is, which method of pagination is the best choice for a scalable platform? My project explores the two most common methods...
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 
 ### Conclusion: From a Technical Detail to a Strategic Decision
-While offset-based pagination is a perfectly acceptable choice for a smaller company, for a high-scale ecommerce platform focused on APIs as a key service to deliver massive amounts of data, the trade-off is clear. The long-term value of a reliable and performant API far outweighs the short-term convenience of a simple implementation.
+While offset-based pagination is a perfectly acceptable choice for a smaller company, for a high-scale ecommerce platform focused on APIs, a Cursor implementation is key to deliver massive amounts of data. The long-term value of a reliable and performant API (cursor) far outweighs the short-term convenience of a simple implementation (offset).
 
 This project taught me that a technical detail like pagination is actually a critical strategic decision. For a mature platform, a TPM needs to make a long-term architectural decision that prioritizes performance and reliability and understands what's happening under the hood. 
 
