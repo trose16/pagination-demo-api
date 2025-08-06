@@ -59,7 +59,7 @@ _
 
 
 ### Conclusion: From a Technical Detail to a Strategic Decision
-While offset-based pagination is a perfectly acceptable choice for a smaller company, for a high-scale platform like BigCommerce, the trade-off is clear. The long-term value of a reliable and performant API far outweighs the short-term convenience of a simple implementation.
+While offset-based pagination is a perfectly acceptable choice for a smaller company, for a high-scale ecommerce platform focused on APIs as a key service to deliver massive amounts of data, the trade-off is clear. The long-term value of a reliable and performant API far outweighs the short-term convenience of a simple implementation.
 
 This project taught me that a technical detail like pagination is actually a critical strategic decision. For a mature platform, a TPM needs to make a long-term architectural decision that prioritizes performance and reliability and understands what's happening under the hood. 
 
