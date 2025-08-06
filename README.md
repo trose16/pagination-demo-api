@@ -4,6 +4,7 @@ Sources:
 https://www.youtube.com/watch?v=Ynp6Gdd3XVE
 https://www.youtube.com/watch?v=mYQfslCJ5KM
 https://dev.to/emmabase/how-to-implement-pagination-on-api-endpoint-using-nodejs-and-typescript-43e5
+https://www.youtube.com/watch?v=cmg4Hmtufec
 
 When working with large data such as product catalogs an API call would result in thousands of returns. Returning all data at once is not practical for a single call.  Pagination is an API design pattern that enables us to present information to a user incrementally in chunks to improve user experience. It is an answer to memory constraints that would cause bottlenecks and slow sites, to try and retrieve all data at once from the database at this scale. 
 
@@ -27,6 +28,8 @@ Faulty Performance at Scale: This is the big issue. As the dataset grows, the da
 Inaccurate Results: If new data is added or removed while a user is paginating, the pages can "shift," causing the user to either see duplicate items or miss items entirely.
 
 
-Cursor-Based Pagination 
-
-
+Cursor-Based Pagination Notes
+Can only work on sequential columns such as ID or timestamp 
+paginate forward use ascending order
+to get the records in reverse order (or previous page) we need to get the records that are less than the previous cursor
+Get one more record than we need and reassign previous and next cursor. 
