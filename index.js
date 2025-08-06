@@ -20,7 +20,7 @@ app.get('/products', (req, res) => {
 app.get('/api/products/offset', (req, res) => {
   const page = parseInt(req.query.page) || 1; // In Express, req.query is how we access the query parameters from the URL (e.g., ?page=1&limit=10).
   const limit = parseInt(req.query.limit) || 10; //use parseInt() to convert the query parameters (which are always strings) into numbers so we can do math with them.
-  const offset = (page - 1) * limit;
+  const offset = (page - 1) * limit; // Indicates where to start counting from in a list of items.
 
   const paginatedProducts = products.slice(offset, offset + limit); // Using JS slice method to return a new array containing the elements from the offset to the offset + limit index. It's the core of my pagination logic.
   console.log("Paginated Products:", paginatedProducts);
@@ -41,7 +41,7 @@ app.get('/api/products/offset', (req, res) => {
 app.get('/api/products/cursor', (req, res) => {
   const limit = parseInt(req.query.limit) || 10;
   const after = req.query.after; // 'after' is the cursor that indicates where to start the next page of results.
-  console.log("After Cursor:", after);
+  
 
   let startIndex = 0;
   if (after) {
