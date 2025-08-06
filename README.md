@@ -29,6 +29,10 @@ Inaccurate Results: If new data is added or removed while a user is paginating, 
 
 
 Cursor-Based Pagination Notes
+1- Determne cursor, sorting order of cursor column, and direction of pagination (we're taking records that are greater or less than the cursor)
+2- Fetch records
+3- Determine new, next and prev cursors
+
 Can only work on sequential columns such as ID or timestamp 
 paginate forward use ascending order
 to get the records in reverse order (or previous page) we need to get the records that are less than the previous cursor
